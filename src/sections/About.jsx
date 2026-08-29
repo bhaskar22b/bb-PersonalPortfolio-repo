@@ -1,4 +1,6 @@
 import { FaCode, FaRocket, FaUsers, FaLightbulb } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 
 const highlights = [
   {
@@ -28,8 +30,13 @@ const highlights = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+    <section id="about" className="py-24 relative overflow-hidden fade-left ">
+      <motion.div className="max-w-6xl mx-auto px-6 relative z-10"
+      initial={{opacity:0, y:50}}
+      whileInView={{opacity:1, y:0}}
+      transition={{ duration:0.5}}
+      viewport={{ once: true}}
+      >
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -94,7 +101,7 @@ export const About = () => {
           </div>
 
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

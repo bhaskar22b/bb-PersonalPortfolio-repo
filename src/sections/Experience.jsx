@@ -41,7 +41,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="education" className="py-32 relative overflow-hidden">
+    <section id="education" className="py-32 relative overflow-hidden fade-up">
 
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 

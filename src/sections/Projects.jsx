@@ -2,6 +2,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 // import AnimatedBorderButton from "./AnimatedBorderButton";
+import { motion } from "framer-motion";
+
 
 const projects = [
   {
@@ -44,7 +46,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <motion.section id="projects" className="py-24 relative overflow-hidden fade-left"
+    initial={{opacity:0, y:50}}
+      whileInView={{opacity:1, y:0}}
+      transition={{ duration:0.5}}
+      viewport={{ once: true}}
+    >
 
       {/* Background */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-[var(--color-primary)]/5 rounded-full blur-3xl" />
@@ -53,7 +60,12 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto px-6 relative z-10">
 
         {/* Header */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
+        <div className="text-center mx-auto max-w-3xl mb-16"
+        initial={{opacity:0, y:50}}
+      whileInView={{opacity:1, y:0}}
+      transition={{ duration:0.5}}
+      viewport={{ once: true}}
+        >
           <span className="text-[var(--color-secondary-foreground)] text-sm uppercase animate-fade-in">
             Featured Work
           </span>
@@ -143,7 +155,7 @@ const Projects = () => {
         </div> */}
 
       </div>
-    </section>
+    </motion.section>
   );
 };
 

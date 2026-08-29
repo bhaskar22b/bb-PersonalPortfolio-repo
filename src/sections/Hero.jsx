@@ -30,7 +30,7 @@ const skills = [
 
 export const Hero = () => {
   return (
-    <section className='relative min-h-screen flex items-center overflow-hidden'>
+    <section className='relative min-h-screen flex items-center overflow-hidden fade-up'>
       {/* bg */}
       <div className='absolute inset-0'>
         <img src="projects/hero-bg.jpg" alt="Hero image" className='w-full h-full object-cover opacity-40' />
@@ -161,31 +161,65 @@ export const Hero = () => {
   </div>
 </div> */}
 
-        <div className="mt-40 text-center">
-          <p className="text-3xl md:text-4xl font-semibold text-white mb-6">
-            <span className='text-6xl'>T</span>echnologies I <span className="text-[var(--color-primary)] glow-text"> Work </span>with
-          </p>
+        <div className="mt-20 sm:mt-28 md:mt-40 text-center px-4 sm:px-6">
+  
+  <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-8 sm:mb-10">
+    <span className="text-5xl sm:text-6xl">T</span>echnologies I{" "}
+    <span className="text-[var(--color-primary)] glow-text">
+      Work
+    </span>{" "}
+    with
+  </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto relative overflow-hidden aspect-video">
-            {skills.map((skill, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center gap-3 
-      bg-[var(--color-card)] border border-[var(--color-border)] 
-      rounded-xl py-6 text-[var(--color-foreground)] font-medium 
-      hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition group glass overflow-hidden"
-              >
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-125 mb-1"
-                />
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-5 md:gap-6 max-w-4xl mx-auto relative">
+    
+    {skills.map((skill, idx) => (
+      <div
+        key={idx}
+        className="
+          flex flex-col items-center justify-center
+          gap-2 sm:gap-3
+          bg-[var(--color-card)]
+          border border-[var(--color-border)]
+          rounded-xl
+          py-4 sm:py-5 md:py-6
+          px-2
+          text-sm sm:text-base
+          text-[var(--color-foreground)]
+          font-medium
+          hover:border-[var(--color-primary)]
+          hover:text-[var(--color-primary)]
+          transition
+          group
+          glass
+          overflow-hidden
+          min-h-[120px] sm:min-h-[140px]
+        "
+      >
+        <img
+          src={skill.image}
+          alt={skill.name}
+          className="
+            w-9 h-9
+            sm:w-11 sm:h-11
+            md:w-12 md:h-12
+            object-contain
+            transition-transform
+            duration-500
+            group-hover:scale-125
+            mb-1
+          "
+        />
 
-                <span>{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <span className="text-center break-words">
+          {skill.name}
+        </span>
+      </div>
+    ))}
+
+  </div>
+</div>
+
 
       </div>
     </section>

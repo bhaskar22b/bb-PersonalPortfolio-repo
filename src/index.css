@@ -193,4 +193,58 @@ html {
 .glow-border {
   box-shadow: 0 0 15px var(--color-primary);
 }
+
+
+/* animetions  */
+.fade-up {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeUp 1s ease forwards;
 }
+.fade-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: fadeLeft 1s ease forwards;
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: fadeRight 1s ease forwards;
+}
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+}
+
+
