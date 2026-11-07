@@ -14,19 +14,27 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent py-5">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#0d0c1d]/75 backdrop-blur-xl border-b border-white/10 shadow-lg py-4 transition-all duration-300">
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
         <a
           href="/"
-          className="text-xl font-bold tracking-tight text-[var(--color-foreground)] hover:text-[var(--color-primary)] transition"
+          className="flex items-center gap-2"
         >
-          BB <span className="text-[var(--color-primary)]">.</span>
+          {/* <img
+            src="/R%20Projects/nWlogo.png"
+            alt="BB Logo"
+            className="h-12 w-12 object-contain"
+          /> */}
+
+          <span className="text-2xl font-extrabold tracking-wider text-white">
+            BB<span className="text-[var(--color-primary)]">.</span>
+          </span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-4 glass px-4 py-2 rounded-full">
+        <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full shadow-md">
           {navLinks.map((link, index) => (
             <a
               key={index}
