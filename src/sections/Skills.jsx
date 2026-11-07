@@ -231,7 +231,7 @@ const Skills = () => {
                       </div>
 
                       {/* Skills */}
-                      <div className="grid flex-1 grid-cols-2 content-start gap-3">
+                      <div className="grid flex-1 grid-cols-2 content-start gap-x-4 gap-y-5">
                         {category.skills.map((skill) => {
                           const SkillIcon = skill.icon;
 
@@ -239,7 +239,7 @@ const Skills = () => {
                             <motion.div
                               key={skill.name}
                               whileHover={{ scale: 1.05, y: -3 }}
-                              className="group/skill flex min-w-0 items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-3 transition-all duration-300 hover:border-[var(--color-primary)]/60 hover:bg-[var(--color-primary)]/10 sm:gap-2.5"
+                              className="group/skill flex min-w-0 items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-4 transition-all duration-300 hover:border-[var(--color-primary)]/60 hover:bg-[var(--color-primary)]/10 sm:gap-2.5"
                             >
                               <SkillIcon
                                 className="shrink-0 text-lg transition-transform duration-300 group-hover/skill:scale-110 sm:text-xl"
