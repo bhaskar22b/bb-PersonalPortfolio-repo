@@ -6,6 +6,7 @@ import Experience from "./sections/Experience"
 import { Hero } from "./sections/Hero"
 import Projects from "./sections/Projects"
 import Testmionails from "./sections/Testmionails"
+import Certifications from "./sections/Certifications";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <About />
           {/* //experiences=eduation */}
           <Experience />  
+          <Certifications />
           <Projects />
           <Testmionails />
           <Contact />

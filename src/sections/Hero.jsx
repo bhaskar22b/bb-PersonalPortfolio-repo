@@ -11,6 +11,7 @@ import {
   FaImage,
   FaChartBar
 } from "react-icons/fa";
+import Skills from "../sections/Skills";
 
 const skills = [
   { name: "React", image: "/skills/library.png" },
@@ -47,7 +48,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className='inline-flex items-center gap-2 px-4 py-2  rounded-full glass text-sm text-[var(--color-primary)]'>
                 <span className='w-2 h-2 bg-[var(--color-primary)] rounded-full'></span>
-                WEB DEVELOPER : React Specialist
+                AI/ML & PYTHON DEVELOPER
               </span>
             </div>
 
@@ -63,9 +64,10 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm BHaskar Bhushan — a software engineer specializing in
-                React, Javascript, and python. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Bhaskar Bhushan — an MCA student specializing in
+                Artificial Intelligence and Machine Learning. I enjoy building
+                Python applications, exploring AI technologies, and developing
+                modern web experiences.
               </p>
             </div>
 
@@ -162,63 +164,10 @@ export const Hero = () => {
 </div> */}
 
         <div className="mt-20 sm:mt-28 md:mt-40 text-center px-4 sm:px-6">
-  
-  <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-8 sm:mb-10">
-    <span className="text-5xl sm:text-6xl">T</span>echnologies I{" "}
-    <span className="text-[var(--color-primary)] glow-text">
-      Work
-    </span>{" "}
-    with
-  </p>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-5 md:gap-6 max-w-4xl mx-auto relative">
-    
-    {skills.map((skill, idx) => (
-      <div
-        key={idx}
-        className="
-          flex flex-col items-center justify-center
-          gap-2 sm:gap-3
-          bg-[var(--color-card)]
-          border border-[var(--color-border)]
-          rounded-xl
-          py-4 sm:py-5 md:py-6
-          px-2
-          text-sm sm:text-base
-          text-[var(--color-foreground)]
-          font-medium
-          hover:border-[var(--color-primary)]
-          hover:text-[var(--color-primary)]
-          transition
-          group
-          glass
-          overflow-hidden
-          min-h-[120px] sm:min-h-[140px]
-        "
-      >
-        <img
-          src={skill.image}
-          alt={skill.name}
-          className="
-            w-9 h-9
-            sm:w-11 sm:h-11
-            md:w-12 md:h-12
-            object-contain
-            transition-transform
-            duration-500
-            group-hover:scale-125
-            mb-1
-          "
-        />
+          <Skills />
 
-        <span className="text-center break-words">
-          {skill.name}
-        </span>
-      </div>
-    ))}
-
-  </div>
-</div>
+        </div>
 
 
       </div>
